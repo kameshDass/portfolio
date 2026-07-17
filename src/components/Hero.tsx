@@ -63,7 +63,7 @@ export default function Hero() {
               priority
               className="
                 object-cover
-                object-right md:object-center
+                object-center md:object-center
                 md:object-center
               "
             />
