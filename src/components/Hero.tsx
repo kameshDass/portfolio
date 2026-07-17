@@ -115,9 +115,9 @@ export default function Hero() {
           className="
             absolute
             left-4
-            bottom-5
+            bottom-10
             md:left-8
-            md:bottom-8
+            md:bottom-10
             z-30
             rounded-xl
             bg-blue-600
