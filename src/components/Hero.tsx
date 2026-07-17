@@ -115,7 +115,7 @@ export default function Hero() {
           className="
             absolute
             left-4
-            bottom-6
+            bottom-8
             md:left-8
             md:bottom-8
             z-30
