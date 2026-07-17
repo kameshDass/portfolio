@@ -10,27 +10,27 @@ export default function Hero() {
 
   const [showImage, setShowImage] = useState(true);
   const [showVideo, setShowVideo] = useState(false);
-
   const [showButton, setShowButton] = useState(true);
   const [showReplay, setShowReplay] = useState(false);
 
   const startIntroduction = () => {
     setShowButton(false);
 
-    setShowImage(false);
-    setShowVideo(true);
-
     setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play();
-      }
-    }, 200);
+      setShowImage(false);
+      setShowVideo(true);
+
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.currentTime = 0;
+          videoRef.current.play();
+        }
+      }, 100);
+    }, 500);
   };
 
   const replayIntroduction = () => {
     setShowReplay(false);
-
     setShowImage(false);
     setShowVideo(true);
 
@@ -39,7 +39,7 @@ export default function Hero() {
         videoRef.current.currentTime = 0;
         videoRef.current.play();
       }
-    }, 200);
+    }, 100);
   };
 
   return (
@@ -47,9 +47,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen overflow-hidden bg-black"
     >
-
       {/* Hero Image */}
-
       <AnimatePresence>
         {showImage && (
           <motion.div
@@ -64,17 +62,16 @@ export default function Hero() {
               fill
               priority
               className="
-                object-contain
-                md:object-cover
+                object-cover
+                object-left md:object-center
+                md:object-center
               "
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-
       {/* Hero Video */}
-
       <AnimatePresence>
         {showVideo && (
           <motion.video
@@ -85,15 +82,15 @@ export default function Hero() {
             playsInline
             preload="auto"
             className="
-              absolute 
-              inset-0 
-              h-full 
-              w-full 
-              object-contain
-              md:object-cover
+              absolute
+              inset-0
+              h-full
+              w-full
+              object-cover
+              object-[20%_center]
+              md:object-center
             "
             onEnded={() => {
-
               if (videoRef.current) {
                 videoRef.current.pause();
               }
@@ -101,297 +98,185 @@ export default function Hero() {
               setShowVideo(false);
               setShowImage(true);
               setShowReplay(true);
-
             }}
           >
-
-            <source
-              src="/videos/intro.mp4"
-              type="video/mp4"
-            />
-
+            <source src="/videos/intro.mp4" type="video/mp4" />
           </motion.video>
         )}
       </AnimatePresence>
 
-
       {/* Dark Overlay */}
-
       <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-
-
-      {/* Introduction Button */}
-
+      {/* Hear My Introduction */}
       {showButton && (
         <button
           onClick={startIntroduction}
           className="
-          absolute
-          left-4
-          bottom-4
-          z-30
-          rounded-xl
-          bg-blue-600
-          px-5
-          py-3
-          text-sm
-          font-semibold
-          text-white
-          shadow-xl
-          transition
-          hover:scale-105
-          hover:bg-blue-700
-
-          md:left-8
-          md:bottom-8
-          md:px-6
-          md:text-base
+            absolute
+            left-4
+            bottom-6
+            md:left-8
+            md:bottom-8
+            z-30
+            rounded-xl
+            bg-blue-600
+            px-4
+            py-3
+            md:px-6
+            font-semibold
+            text-sm
+            md:text-base
+            text-white
+            shadow-xl
+            transition
+            hover:scale-105
+            hover:bg-blue-700
           "
         >
           🔊 Hear My Introduction
         </button>
       )}
 
-
-
-      {/* Replay Button */}
-
+      {/* Replay */}
       {showReplay && (
         <button
           onClick={replayIntroduction}
           className="
-          absolute
-          left-4
-          bottom-4
-          z-30
-          rounded-xl
-          bg-green-600
-          px-5
-          py-3
-          text-sm
-          font-semibold
-          text-white
-          shadow-xl
-          transition
-          hover:scale-105
-          hover:bg-green-700
-
-          md:left-8
-          md:bottom-8
-          md:px-6
-          md:text-base
+            absolute
+            left-4
+            bottom-6
+            md:left-8
+            md:bottom-8
+            z-30
+            rounded-xl
+            bg-green-600
+            px-4
+            py-3
+            md:px-6
+            font-semibold
+            text-sm
+            md:text-base
+            text-white
+            shadow-xl
+            transition
+            hover:scale-105
+            hover:bg-green-700
           "
         >
           🔄 Replay Introduction
         </button>
       )}
 
-
-
-
-      {/* Content Card */}
-
+      {/* Right Side Content */}
       <motion.div
-
-        initial={{ opacity:0, x:120 }}
-
-        animate={{ opacity:1, x:0 }}
-
-        transition={{ duration:1 }}
-
+        initial={{ opacity: 0, x: 120 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
         className="
-        absolute
-        right-4
-        top-1/2
-        z-20
-        w-[92%]
-        -translate-y-1/2
-        rounded-3xl
-        border
-        border-white/10
-        bg-black/50
-        p-5
-        backdrop-blur-xl
+          absolute
+          z-20
 
-        sm:w-[80%]
+          w-[92%]
+          max-w-md
 
-        md:right-10
-        md:w-[500px]
-        md:p-8
+          left-1/2
+          -translate-x-1/2
 
-        lg:right-20
+          bottom-8
+
+          md:left-auto
+          md:right-20
+          md:top-1/2
+          md:bottom-auto
+          md:translate-x-0
+          md:-translate-y-1/2
+
+          rounded-3xl
+          border
+          border-white/10
+          bg-black/55
+          backdrop-blur-xl
+
+          p-5
+          md:p-8
         "
-
       >
-
-
-        <p className="
-        mb-2
-        uppercase
-        tracking-[3px]
-        font-semibold
-        text-blue-400
-        text-sm
-        md:text-base
-        ">
+        <p className="mb-2 uppercase tracking-[3px] font-semibold text-blue-400 text-sm md:text-base">
           HELLO THERE!
         </p>
 
-
-
-        <h1 className="
-        mt-2
-        text-3xl
-        md:text-5xl
-        font-bold
-        leading-tight
-        text-white
-        ">
-
+        <h1 className="mt-2 font-bold leading-tight text-white text-3xl md:text-5xl">
           <TypeAnimation
-
-            sequence={[
-              "I'm Kamesh Dass",
-              999999
-            ]}
-
+           sequence={["I'm Kamesh Dass", 1000]}
+repeat={Infinity}
             wrapper="span"
-
             speed={50}
-
             cursor
-
             className="text-blue-500"
-
           />
-
         </h1>
 
-
-
-        <h2 className="
-        mt-3
-        text-xl
-        md:text-2xl
-        font-semibold
-        text-white
-        ">
-
+        <h2 className="mt-3 text-lg md:text-2xl font-semibold text-white">
           Senior Operations Associate
-
         </h2>
 
-
-
-
-        <div className="
-        mt-5
-        space-y-2
-        text-sm
-        md:text-base
-        text-gray-300
-        ">
-
+        <div className="mt-5 space-y-2 text-sm md:text-base text-gray-300">
           <p className="font-semibold text-white">
-
             3+ Years of Experience in
-
           </p>
 
-
           <p>• Operations Management</p>
-
-          <p>• CRM & Customer Experience</p>
-
+          <p>• CRM &amp; Customer Experience</p>
           <p>• Vendor Management</p>
-
           <p>• Stakeholder Management</p>
-
           <p>• SLA Management</p>
-
-
         </div>
 
-
-
-
-        <div className="
-        mt-6
-        flex
-        flex-col
-        gap-3
-
-        sm:flex-row
-        sm:gap-4
-        ">
-
-
+        <div className="mt-6 flex flex-col md:flex-row gap-3">
           <button
-
-          onClick={() =>
-            document
-            .getElementById("skills")
-            ?.scrollIntoView({
-              behavior:"smooth"
-            })
-          }
-
-          className="
-          rounded-xl
-          bg-blue-600
-          px-6
-          py-3
-          text-white
-          transition-all
-          hover:scale-105
-          hover:bg-blue-700
-          "
-
+            onClick={() =>
+              document
+                .getElementById("skills")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="
+              rounded-xl
+              bg-blue-600
+              px-6
+              py-3
+              text-white
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:bg-blue-700
+            "
           >
-
             Explore Portfolio
-
           </button>
 
-
-
-
           <a
-
-          href="/image/resume.pdf"
-
-          download="Kamesh_Dass_Resume.pdf"
-
-          className="
-          rounded-xl
-          border
-          border-white
-          px-6
-          py-3
-          text-center
-          text-white
-          transition-all
-          hover:bg-white
-          hover:text-black
-          hover:scale-105
-          "
-
-          >
-
-            Download Resume
-
-          </a>
-
-
+  href="/image/resume.pdf"
+  download="Kamesh_Dass_Resume.pdf"
+  className="
+    rounded-xl
+    border
+    border-white
+    px-6
+    py-3
+    text-center
+    text-white
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:bg-white
+    hover:text-black
+  "
+>
+  Download Resume
+</a>
         </div>
-
-
       </motion.div>
-
-
     </section>
   );
 }
-                
-
