@@ -63,7 +63,7 @@ export default function Hero() {
               priority
               className="
                 object-cover
-                object-center md:object-center
+                object-center md:object-right
                 md:object-center
               "
             />
@@ -115,7 +115,7 @@ export default function Hero() {
           className="
             absolute
             left-4
-            bottom-8
+            bottom-10
             md:left-8
             md:bottom-8
             z-30
