@@ -48,30 +48,37 @@ export default function Hero() {
       className="relative min-h-screen overflow-hidden bg-black"
     >
       {/* Hero Image */}
-      <AnimatePresence>
-        {showImage && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6 }}
-            className="absolute inset-0"
-          >
-            <Image
-  src="/image/hero.png"
-  alt="Hero"
-  fill
-  priority
-  sizes="100vw"
-  className="
-    object-cover
-    object-[8%_center]
-    md:object-center
-  "
-/>
-          </motion.div>
-        )}
-      </AnimatePresence>
+     {/* Hero Image */}
+<AnimatePresence>
+  {showImage && (
+    <motion.div
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+      className="absolute inset-0"
+    >
+      {/* Desktop */}
+      <Image
+        src="/image/hero.png"
+        alt="Hero Desktop"
+        fill
+        priority
+        sizes="100vw"
+        className="hidden md:block object-cover object-center"
+      />
 
+      {/* Mobile */}
+      <Image
+        src="/image/hero-mobile.png"
+        alt="Hero Mobile"
+        fill
+        priority
+        sizes="100vw"
+        className="block md:hidden object-cover object-center"
+      />
+    </motion.div>
+  )}
+</AnimatePresence>
       {/* Hero Video */}
       <AnimatePresence>
         {showVideo && (
