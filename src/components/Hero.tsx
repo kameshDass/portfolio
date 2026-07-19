@@ -57,16 +57,17 @@ export default function Hero() {
             className="absolute inset-0"
           >
             <Image
-              src="/image/hero.png"
-              alt="Hero"
-              fill
-              priority
-              className="
-                object-cover
-                object-center md:object-right
-                md:object-center
-              "
-            />
+  src="/image/hero.png"
+  alt="Hero"
+  fill
+  priority
+  sizes="100vw"
+  className="
+    object-cover
+    object-[8%_center]
+    md:object-center
+  "
+/>
           </motion.div>
         )}
       </AnimatePresence>
