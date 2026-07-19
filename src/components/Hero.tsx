@@ -58,24 +58,28 @@ export default function Hero() {
       className="absolute inset-0"
     >
       {/* Desktop */}
-      <Image
-        src="/image/hero.png"
-        alt="Hero Desktop"
-        fill
-        priority
-        sizes="100vw"
-        className="hidden md:block object-cover object-center"
-      />
+<div className="hidden md:block absolute inset-0">
+  <Image
+    src="/image/hero.png"
+    alt="Hero Desktop"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center"
+  />
+</div>
 
-      {/* Mobile */}
-      <Image
-        src="/image/hero-mobile.png"
-        alt="Hero Mobile"
-        fill
-        priority
-        sizes="100vw"
-        className="block md:hidden object-cover object-center"
-      />
+{/* Mobile */}
+<div className="block md:hidden absolute inset-0">
+  <Image
+    src="/image/hero-mobile.png"
+    alt="Hero Mobile"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center"
+  />
+</div>
     </motion.div>
   )}
 </AnimatePresence>
