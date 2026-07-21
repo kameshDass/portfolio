@@ -188,14 +188,7 @@ export default function Projects() {
             ))}
 
           </div>
-
-          {/* Internal Project */}
-
-          <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-5">
-            🔒 Internal Project
-          </h4>
-
-                    {/* Project Screenshot */}
+                 {/* Project Screenshot */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-12 mb-6">
             📸 Project Screenshot
