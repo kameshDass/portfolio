@@ -64,7 +64,7 @@ export default function Hero() {
     alt="Hero Desktop"
     fill
     priority
-    sizes="100vw"
+    sizes="99vw"
     className="object-cover object-center"
   />
 </div>
@@ -76,7 +76,7 @@ export default function Hero() {
     alt="Hero Mobile"
     fill
     priority
-    sizes="100vw"
+    sizes="99vw"
     className="object-cover object-center"
   />
 </div>
