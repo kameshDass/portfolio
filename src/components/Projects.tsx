@@ -195,12 +195,6 @@ export default function Projects() {
             🔒 Internal Project
           </h4>
 
-          <p className="text-gray-300 leading-8">
-            This workflow automation was developed exclusively for internal
-            operational use to streamline customer feedback escalation and
-            improve response efficiency. Due to organizational confidentiality,
-            the application and source code cannot be shared publicly.
-          </p>
                     {/* Project Screenshot */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-12 mb-6">
