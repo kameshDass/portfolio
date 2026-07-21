@@ -64,22 +64,11 @@ export default function Hero() {
     alt="Hero Desktop"
     fill
     priority
-    sizes="99vw"
+    sizes="95vw"
     className="object-cover object-center"
   />
 </div>
 
-{/* Mobile */}
-<div className="block md:hidden absolute inset-0">
-  <Image
-    src="/image/hero-mobile.png"
-    alt="Hero Mobile"
-    fill
-    priority
-    sizes="99vw"
-    className="object-cover object-center"
-  />
-</div>
     </motion.div>
   )}
 </AnimatePresence>
