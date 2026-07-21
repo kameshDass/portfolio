@@ -65,7 +65,7 @@ export default function Hero() {
     fill
     priority
     sizes="100vw"
-    className="object-cover object-center scale-90"
+    className="object-cover object-center scale-95"
   />
 </div>
 
