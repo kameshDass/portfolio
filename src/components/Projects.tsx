@@ -19,52 +19,69 @@ export default function Projects() {
           {/* Project Title */}
 
           <h3 className="text-3xl font-bold text-blue-400 mb-6">
-            🚀 HQI Notes Portal
+            🚀 HQI Smart Feedback Escalation System
           </h3>
 
           {/* Project Overview */}
 
           <h4 className="text-2xl font-bold text-blue-300 mb-4">
-            📌 Project Overview
+            📝 Project Overview
           </h4>
 
           <p className="text-gray-300 leading-8">
-            Developed an internal productivity portal using
-            <span className="font-semibold text-white"> HTML</span>,
-            <span className="font-semibold text-white"> CSS</span>, and
-            <span className="font-semibold text-white"> JavaScript</span> to
-            standardize Zendesk note templates for frequently occurring
-            scenarios. The portal was designed to help support agents quickly
-            access, copy, and use predefined templates, reducing manual effort
-            while improving documentation consistency and operational
-            efficiency.
+            HQI Smart Feedback Escalation System is an internal workflow
+            automation solution designed to streamline customer feedback
+            escalation and significantly reduce manual effort.
+
+            <br />
+            <br />
+
+            Previously, whenever customer feedback was received, operations
+            associates manually reviewed the request, performed due diligence,
+            prepared escalation notes, identified the appropriate team, and
+            submitted the escalation manually. This process increased response
+            time and delayed customer issue resolution.
+
+            <br />
+            <br />
+
+            To solve this challenge, I designed an automated workflow where
+            agents simply validate the feedback and click the
+            <span className="font-semibold text-white">
+              {" "}Schedule{" "}
+            </span>
+            button. The system automatically generates standardized escalation
+            notes and routes the request to the appropriate team instantly,
+            enabling faster action, improving operational efficiency, and
+            reducing customer resolution time.
           </p>
 
           {/* Problem Statement */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-4">
-            🚀 Problem Statement
+            📌 Problem Statement
           </h4>
-
-          <p className="text-gray-300 mb-4">
-            Before implementing the portal:
-          </p>
 
           <div className="space-y-3 text-gray-300">
 
-            <p>• Agents manually typed repetitive Zendesk notes.</p>
-
             <p>
-              • Ticket resolution time increased due to repetitive
-              documentation.
+              • Customer feedback had to be manually reviewed before escalation.
             </p>
 
             <p>
-              • Documentation consistency varied across different agents.
+              • Agents manually prepared escalation notes for every request.
             </p>
 
             <p>
-              • Maintaining SLA targets became more challenging.
+              • Identifying the appropriate team consumed additional time.
+            </p>
+
+            <p>
+              • Manual escalation delayed customer issue resolution.
+            </p>
+
+            <p>
+              • Repetitive operational work reduced overall productivity.
             </p>
 
           </div>
@@ -75,46 +92,104 @@ export default function Projects() {
           </h4>
 
           <p className="text-gray-300 mb-4">
-            Developed a centralized web portal that allows support agents to:
+            The automation simplifies the complete feedback escalation process
+            through a single action:
           </p>
 
           <div className="space-y-3 text-gray-300">
 
-            <p>• Select the required support scenario.</p>
-
-            <p>• Instantly copy predefined Zendesk note templates.</p>
-
-            <p>• Paste the notes directly into Zendesk.</p>
+            <p>
+              • Agents validate the customer feedback before escalation.
+            </p>
 
             <p>
-              • Eliminate repetitive manual typing and improve workflow
-              efficiency.
+              • Click the
+              <span className="font-semibold text-white">
+                {" "}Schedule{" "}
+              </span>
+              button to initiate the workflow.
+            </p>
+
+            <p>
+              • Standardized escalation notes are generated automatically.
+            </p>
+
+            <p>
+              • The request is instantly routed to the appropriate operational team.
+            </p>
+
+            <p>
+              • The responsible team receives the request immediately and can begin
+              action without waiting for manual processing.
             </p>
 
           </div>
 
           <p className="text-gray-300 leading-8 mt-6">
-            The portal was deployed using
-            <span className="font-semibold text-white">
-              {" "}GitHub Pages{" "}
-            </span>
-            allowing the entire team to access it through a web browser
-            without requiring any software installation.
+            By automating repetitive operational tasks, the solution minimizes
+            manual effort, improves communication consistency, accelerates
+            customer response time, and enables teams to resolve customer
+            feedback much faster while maintaining operational excellence.
           </p>
 
-          {/* Technologies */}
+          {/* Key Features */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-5">
-            🛠 Technologies Used
+            ✨ Key Features
+          </h4>
+
+          <div className="space-y-3 text-gray-300">
+
+            <p>⚡ One-click automated feedback escalation.</p>
+
+            <p>📝 Automatic generation of standardized escalation notes.</p>
+
+            <p>🎯 Intelligent routing to the appropriate operational team.</p>
+
+            <p>🚀 Faster customer response and issue resolution.</p>
+
+            <p>🤝 Reduced manual effort for support associates.</p>
+
+            <p>📊 Improved SLA compliance and workflow efficiency.</p>
+
+          </div>
+                    {/* Business Impact */}
+
+          <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-5">
+            📈 Business Impact
+          </h4>
+
+          <div className="space-y-3 text-gray-300">
+
+            <p>⚡ Reduced manual escalation effort and repetitive operational tasks.</p>
+
+            <p>🚀 Improved customer issue resolution time.</p>
+
+            <p>📊 Increased SLA compliance through faster processing.</p>
+
+            <p>📝 Standardized escalation notes across all support agents.</p>
+
+            <p>🤝 Improved collaboration between cross-functional teams.</p>
+
+            <p>💼 Enhanced overall operational productivity and workflow efficiency.</p>
+
+          </div>
+
+          {/* Tools & Technologies Used */}
+
+          <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-5">
+            🛠 Tools & Technologies Used
           </h4>
 
           <div className="flex flex-wrap gap-4">
 
             {[
+              "Claude AI",
               "HTML5",
               "CSS3",
               "JavaScript",
-              "GitHub Pages",
+              "GitHub",
+              "Gumloop",
               "Zendesk",
             ].map((tech) => (
               <div
@@ -127,42 +202,19 @@ export default function Projects() {
 
           </div>
 
-          {/* Business Impact */}
+          {/* Internal Project */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-5">
-            📈 Business Impact
+            🔒 Internal Project
           </h4>
 
-          <div className="space-y-3 text-gray-300">
-
-            <p>✅ Reduced repetitive manual typing.</p>
-
-            <p>✅ Improved documentation consistency across support teams.</p>
-
-            <p>✅ Supported SLA compliance.</p>
-
-            <p>✅ Helped reduce average ticket resolution time.</p>
-
-            <p>✅ Improved overall operational efficiency.</p>
-
-          </div>
-
-          {/* Live Demo */}
-
-          <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-5">
-            🌐 Live Demo
-          </h4>
-
-          <a
-            href="https://dkamesh-dev.github.io/KameshGopal-Grid/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-xl bg-blue-600 px-7 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700"
-          >
-            🚀 View Live Project
-          </a>
-
-          {/* Screenshot */}
+          <p className="text-gray-300 leading-8">
+            This workflow automation was developed exclusively for internal
+            operational use to streamline customer feedback escalation and
+            improve response efficiency. Due to organizational confidentiality,
+            the application and source code cannot be shared publicly.
+          </p>
+                    {/* Project Screenshot */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-12 mb-6">
             📸 Project Screenshot
@@ -172,10 +224,10 @@ export default function Projects() {
 
             <Image
               src="/image/project-hqi.png"
-              alt="HQI Notes Portal"
+              alt="HQI Smart Feedback Escalation System"
               width={1400}
               height={800}
-              className="w-full object-cover"
+              className="w-full object-cover transition-transform duration-500 hover:scale-105"
             />
 
           </div>
