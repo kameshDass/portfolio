@@ -29,33 +29,20 @@ export default function Projects() {
           </h4>
 
            <p className="text-gray-300 leading-8">
-            HQI Smart Feedback Escalation System is an internal workflow
-            automation solution designed to streamline customer feedback
-            escalation and significantly reduce manual effort
+  Developed an internal workflow automation solution to streamline customer
+  feedback escalation and reduce manual effort. Previously, support agents
+  manually reviewed customer feedback, prepared escalation notes, identified
+  the appropriate team, and submitted requests individually, increasing
+  response time and delaying issue resolution.
 
-            <br />
-            <br />
+  <br /><br />
 
-            Previously, whenever customer feedback was received, operations
-            teams manually reviewed the request, performed due diligence,
-            prepared escalation notes, identified the appropriate team, and
-            submitted the escalation manually. This process increased response
-            time and delayed customer issue resolution.
-
-            <br />
-            <br />
-
-            To solve this challenge, I designed an automated workflow where
-            agents simply validate the feedback and click the
-            <span className="font-semibold text-white">
-              {" "}Schedule{" "}
-            </span>
-            button. The system automatically generates standardized escalation
-            notes and routes the request to the appropriate team instantly,
-            enabling faster action, improving operational efficiency, and
-            reducing customer resolution time.
-          </p>
-
+  The solution introduces a one-click <span className="font-semibold text-white">Schedule</span>
+  workflow that automatically generates standardized escalation notes and
+  routes the request to the appropriate team. This significantly improves
+  operational efficiency, reduces turnaround time, and enables faster customer
+  issue resolution while maintaining consistent communication across teams.
+</p>
           {/* Problem Statement */}
 
           <h4 className="text-2xl font-bold text-blue-300 mt-10 mb-4">
