@@ -29,31 +29,9 @@ export default function Projects() {
           </h4>
 
           <p className="text-gray-300 leading-8">
-            HQI Smart Feedback Escalation System is an internal workflow
-            automation solution designed to streamline customer feedback
-            escalation and significantly reduce manual effort.
-
-            <br />
-            <br />
-
-            Previously, whenever customer feedback was received, operations
-            associates manually reviewed the request, performed due diligence,
-            prepared escalation notes, identified the appropriate team, and
-            submitted the escalation manually. This process increased response
-            time and delayed customer issue resolution.
-
-            <br />
-            <br />
-
-            To solve this challenge, I designed an automated workflow where
-            agents simply validate the feedback and click the
-            <span className="font-semibold text-white">
-              {" "}Schedule{" "}
-            </span>
-            button. The system automatically generates standardized escalation
-            notes and routes the request to the appropriate team instantly,
-            enabling faster action, improving operational efficiency, and
-            reducing customer resolution time.
+            
+The HQI Smart Feedback Escalation System is an internal workflow automation solution developed to streamline the customer feedback escalation process. Instead of manually reviewing every feedback request, preparing escalation notes, and routing it to the appropriate team, the system automates the entire workflow with a single click. This significantly reduces manual effort, improves operational efficiency, and enables faster customer issue resolution while maintaining standardized communication across teams.
+            
           </p>
 
           {/* Problem Statement */}
