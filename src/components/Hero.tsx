@@ -64,8 +64,8 @@ export default function Hero() {
     alt="Hero Desktop"
     fill
     priority
-    sizes="100vw"
-    className="object-contain object-center bg-black"
+    sizes="95vw"
+    className="object-cover object-center"
   />
 </div>
 
