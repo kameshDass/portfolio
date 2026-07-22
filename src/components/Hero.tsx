@@ -58,14 +58,14 @@ export default function Hero() {
       className="absolute inset-0"
     >
       {/* Desktop */}
-<div className="hidden md:block absolute inset-0 overflow-hidden">
+<div className="hidden md:block absolute inset-0">
   <Image
     src="/image/hero.png"
     alt="Hero Desktop"
     fill
     priority
     sizes="100vw"
-    className="object-cover object-center scale-95"
+    className="object-contain object-center bg-black"
   />
 </div>
 
